@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT project_record (head,workteam,abstract,deliverables,date) >
+
+<!ELEMENT head (key_name,title,subtitle?,begin_date,end_date,supervisor) >
+
+<!ELEMENT key_name (#PCDATA) >
+<!ELEMENT title (#PCDATA) >
+<!ELEMENT subtitle (#PCDATA) >
+<!ELEMENT begin_date (#PCDATA) >
+<!ELEMENT end_date (#PCDATA) >
+<!ELEMENT supervisor (name,link) >
+
+<!ELEMENT workteam (member)+ >
+
+<!ELEMENT member (name,number,email,github_link) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT number (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+<!ELEMENT github_link (#PCDATA) >
+
+<!ELEMENT abstract (paragraph)* >
+<!ELEMENT paragraph (#PCDATA|link)* >
+<!ELEMENT link (#PCDATA) >
+
+<!ELEMENT deliverables (deliverable)* >
+<!ELEMENT deliverable (name,link) >
+
+<!ELEMENT date (#PCDATA) >
+        
+<!ATTLIST link url CDATA #REQUIRED >
