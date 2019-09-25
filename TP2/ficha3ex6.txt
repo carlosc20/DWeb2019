@@ -1,0 +1,10 @@
+Ficha3, exercício 6
+
+(a)
+/ARQSITS/ARQELEM[./normalize-space(CONCEL)="Amares"]/IDENTI
+
+(b)
+/ARQSITS/ARQELEM/CONCEL
+
+(c)
+/ARQSITS/ARQELEM[./normalize-space(CONCEL)="Montalegre"]/DESCRI
