@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project_record SYSTEM "project_record.dtd">
+<project_record>
+    <head>
+        <key_name></key_name>
+        <title>TP2</title>
+        <begin_date>Setembro 2019</begin_date>
+        <end_date>Setembro 2019</end_date>
+        <supervisor url="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+    </head>
+    <workteam>
+        <member>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <number>A81946</number>
+            <email>a81946@alunos.uminho.pt</email>
+            <github_link>https://github.com/carlosc20</github_link>
+        </member>
+    </workteam>
+    <abstract>
+        <paragraph>Resoluções dos exercícios 6 e 7 da ficha 3 (<link url="http://www4.di.uminho.pt/~jcr/XML/CURSOS/PED2008/fichas/ficha3/index.html">XPath</link>).</paragraph>
+        <paragraph>Criação do DTD que define o Project Record entregue juntamente com os trabalhos práticos.</paragraph>
+    </abstract>
+    <deliverables>
+        <deliverable url="project_record.dtd">DTD do Project Record (DTD)</deliverable>
+        <deliverable url="arq.dtd">Resolução ficha 3, exercício 7 (DTD)</deliverable>
+        <deliverable url="ficha3ex6.txt">Resolução ficha 3, exercício 6 (TXT)</deliverable>
+    </deliverables>
+    <date>29-09-2019</date>
+</project_record>

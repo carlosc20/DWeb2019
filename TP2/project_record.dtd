@@ -9,7 +9,7 @@
 <!ELEMENT subtitle (#PCDATA) >
 <!ELEMENT begin_date (#PCDATA) >
 <!ELEMENT end_date (#PCDATA) >
-<!ELEMENT supervisor (name,link) >
+<!ELEMENT supervisor (#PCDATA) >
 
 <!ELEMENT workteam (member)+ >
 
@@ -24,8 +24,10 @@
 <!ELEMENT link (#PCDATA) >
 
 <!ELEMENT deliverables (deliverable)* >
-<!ELEMENT deliverable (name,link) >
+<!ELEMENT deliverable (#PCDATA) >
 
 <!ELEMENT date (#PCDATA) >
         
 <!ATTLIST link url CDATA #REQUIRED >
+<!ATTLIST supervisor url CDATA #REQUIRED >
+<!ATTLIST deliverable url CDATA #REQUIRED >
