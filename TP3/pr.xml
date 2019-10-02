@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname></keyname>
+        <title>TP3</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>1/10/2019</bdate>
+        <edate>8/10/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A81946</identifier>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <email>a81946@alunos.uminho.pt</email>
+            <git>https://github.com/carlosc20</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Criação de um XSL para transformar o pr.xml em uma página html.</p>
+        <p>Criação de um XSL para transformar o xml dos arqueosítios em várias páginas hmtl, nomeadamente um índice e uma página por arqueosítio.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.hmtl">(HTML)</deliverable>
+        <deliverable path="pr.xsl">(XSL)</deliverable>
+        <deliverable path="arq.xsl"></deliverable>
+        <deliverable path="arq/index.html"></deliverable>
+    </deliverables>
+</pr>
