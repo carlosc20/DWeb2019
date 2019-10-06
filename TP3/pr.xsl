@@ -4,7 +4,7 @@
     
     <xsl:output method="xhtml" indent="yes" encoding="UTF-8"/>
     
-    <xsl:template match="/">
+    <xsl:template match="/pr">
         <html>
             <head>
                 <title>Project Record</title>
@@ -19,19 +19,19 @@
                 
                 <h2>WorkTeam:</h2>
                 <ol>
-                <xsl:apply-templates select="worker"/>
+                    <xsl:apply-templates select="workteam/worker"/>
                 </ol>
                 
                 <hr/>
                 
                 <h2>Abstract:</h2>
-                <xsl:apply-templates select="p"/>
+                    <xsl:apply-templates select="abstract/p"/>
                 
                 <hr/>
                 
                 <h2>Deliverables:</h2>
                 <ul>
-                <xsl:apply-templates select="deliverable"/>
+                    <xsl:apply-templates select="deliverables/deliverable"/>
                 </ul>
                 
             </body>
@@ -47,9 +47,9 @@
             <tr>
                 <th>TITLE:</th><td><xsl:value-of select="title"/></td>
             </tr>
-            <tr>
-                <th>SUBTITLE:</th><td><xsl:value-of select="subtitle"/></td>
-            </tr>
+            
+            <xsl:apply-templates select="subtitle"/>  
+            
             <tr>
                 <th>SUPERVISOR:</th><td><a href="{supervisor/@homepage}"><xsl:value-of select="supervisor"/></a></td>
             </tr>
@@ -63,9 +63,15 @@
         </table>
     </xsl:template>
     
+    <xsl:template match="subtitle">
+        <tr>
+            <th>SUBTITLE:</th><td><xsl:value-of select="."/></td>
+        </tr>
+    </xsl:template>
+    
     
     <xsl:template match="worker">
-        <li><xsl:value-of select="name"/> - <xsl:value-of select="identifier"/> - <a href="{github}"><xsl:value-of select="github"/></a></li>
+        <li><xsl:value-of select="name"/> - <xsl:value-of select="identifier"/> - <a href="{git}"><xsl:value-of select="git"/></a></li>
     </xsl:template>
     
     <xsl:template match="p">

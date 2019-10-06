@@ -18,12 +18,12 @@
     </workteam>
     <abstract>
         <p>Criação de um XSL para transformar o pr.xml em uma página html.</p>
-        <p>Criação de um XSL para transformar o xml dos arqueosítios em várias páginas hmtl, nomeadamente um índice e uma página por arqueosítio.</p>
+        <p>Criação de um XSL para transformar o xml dos arqueossítios em várias páginas hmtl, nomeadamente um índice e uma página por arqueossítio.</p>
     </abstract>
     <deliverables>
-        <deliverable path="pr.hmtl">(HTML)</deliverable>
-        <deliverable path="pr.xsl">(XSL)</deliverable>
-        <deliverable path="arq.xsl"></deliverable>
-        <deliverable path="arq/index.html"></deliverable>
+        <deliverable path="pr.hmtl">Project Record gerado a partir do xml (HTML)</deliverable>
+        <deliverable path="pr.xsl">XSL usado no PR (XSL)</deliverable>
+        <deliverable path="arq.xsl">XSL usado nos arqueosítios (XSL)</deliverable>
+        <deliverable path="arq/index.html">Índice do html gerado a partir dos arqueosítios (HTML)</deliverable>
     </deliverables>
 </pr>
