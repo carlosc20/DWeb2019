@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../common/PR.dtd">
+<pr>
+    <metadata>
+        <keyname></keyname>
+        <title>TPC4</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>8/10/2019</bdate>
+        <edate>14/10/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A81946</identifier>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <email>a81946@alunos.uminho.pt</email>
+            <git>https://github.com/carlosc20</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este projeto consiste em várias partes, usando o <xref url=" http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/arq.xml">dataset dos arqueossítios em XML</xref>:</p>
+        <p>Uma stylesheet XSLT que processe este ficheiro e gere um ficheiro por cada arqueossítio e os coloque numa pasta: arq1.xsml, arq2.xml...</p>
+        <p>Uma stylesheet que esteja associada aos ficheiros XML gerados e os transforme em HTML.</p>
+        <p>Um servidor em nodejs que serva os ficheiros, ou seja, responde aos pedidos: localhost:7777/3  --> Coloca no browser o conteúdo do arq3.xml em formato HTML.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="arq-split.xsl">XSL usado para garar o XML dos arqueossítios individuais (XSL)</deliverable>
+        <deliverable path="arq2html.xsl">XSL usado para gerar HTML dos arqueossítios (XSL)</deliverable>
+        <deliverable path="server.js">Servidor node.js (JS)</deliverable>
+    </deliverables>
+</pr>
