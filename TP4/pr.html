@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <title>Project Record</title>
+      <meta charset="UTF-8"></meta>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+   </head>
+   <body>
+      <div class="w3-container">
+         <h1>Project Record</h1>
+         <table>
+            <tr>
+               <th>KEY NAME:</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>TITLE:</th>
+               <td>TPC4</td>
+            </tr>
+            <tr>
+               <th>SUPERVISOR:</th>
+               <td>
+                  <a href="www.di.uminho.pt/~jcr">José Carlos Ramalho</a>
+               </td>
+            </tr>
+            <tr>
+               <th>BEGIN DATE:</th>
+               <td>8/10/2019</td>
+            </tr>
+            <tr>
+               <th>END DATE:</th>
+               <td>14/10/2019</td>
+            </tr>
+         </table>
+         <hr></hr>
+         <h2>WorkTeam:</h2>
+         <ol>
+            <li>Carlos Peixoto Antunes de Castro - A81946 - 
+               <a href="https://github.com/carlosc20">https://github.com/carlosc20</a>
+            </li>
+         </ol>
+         <hr></hr>
+         <h2>Abstract:</h2>
+         
+         <p>Este projeto consiste em várias partes, usando o 
+            <a href=" http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/arq.xml">dataset dos arqueossítios em XML</a>:
+         </p>
+         
+         <p>Uma stylesheet XSLT que processe este ficheiro e gere um ficheiro por cada arqueossítio
+            e os coloque numa pasta: arq1.xsml, arq2.xml...
+         </p>
+         
+         <p>Uma stylesheet que esteja associada aos ficheiros XML gerados e os transforme em HTML.</p>
+         
+         <p>Um servidor em nodejs que serva os ficheiros, ou seja, responde aos pedidos: localhost:7777/3
+            --&gt; Coloca no browser o conteúdo do arq3.xml em formato HTML.
+         </p>
+         
+         <hr></hr>
+         <h2>Deliverables:</h2>
+         <ul>
+            <li>
+               <a href="arq-split.xsl">XSL usado para garar o XML dos arqueossítios individuais (XSL)</a>
+            </li>
+            <li>
+               <a href="arq2html.xsl">XSL usado para gerar HTML dos arqueossítios (XSL)</a>
+            </li>
+            <li>
+               <a href="server.js">Servidor node.js (JS)</a>
+            </li>
+         </ul>
+      </div>
+   </body>
+</html>
