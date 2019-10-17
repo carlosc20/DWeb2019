@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../common/PR.dtd">
+<pr>
+    <metadata>
+        <keyname></keyname>
+        <title>TPC5</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>15/10/2019</bdate>
+        <edate>21/10/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A81946</identifier>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <email>a81946@alunos.uminho.pt</email>
+            <git>https://github.com/carlosc20</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este projeto consiste num servidor node.js que fornece uma página html com uma lista de tarefas, com a opção de adicionar novas tarefas.</p>
+        <p>A página html é gerada a partir da ferramenta de template pug.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="todolist.js">Servidor node.js (JS)</deliverable>
+        <deliverable path="layout.pug">Template do html do layout (PUG)</deliverable>
+        <deliverable path="index.pug">Template do html da página principal (PUG)</deliverable>
+        <deliverable path="erro.pug">Template do html da página de erro (PUG)</deliverable>
+        <deliverable path="stylesheets/w3.css">CSS usado (CSS)</deliverable>
+    </deliverables>
+</pr>
