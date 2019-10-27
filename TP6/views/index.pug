@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    .w3-container
+        h1 Arquivo Sonoro de Ernesto Veiga de Oliveira
+        a(href='/novo')
+            button.w3-button.w3-blue-grey.w3-section Nova música
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Lista de Músicas
+            .w3-container
+                table.w3-table-all
+                    tr
+                        th Título
+                        th Província
+                        th Local
+                        th Instrumentos
+                        th Operações
+                    each i in lista
+                        tr 
+                            td= i.tit
+                            td= i.prov
+                            td= i.local
+                            td= i.inst
+                            td
+                                button.w3-button.w3-blue-grey(onclick="deleteMusic('" + i.id + "')") Apagar
+            footer.w3-container.w3-teal
+                address Criado por Carlos Castro 

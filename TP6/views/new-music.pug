@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .w3-container
+        h1 Arquivo Sonoro de Ernesto Veiga de Oliveira
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Nova Música
+            form.w3-section.w3-container(action='/' method='POST')
+                label.w3-teal
+                    b Província
+                input.w3-input.w3-border.w3-light-grey(type='text' name='prov')
+                label.w3-teal
+                    b Local
+                input.w3-input.w3-border.w3-light-grey(type='text' name='local')
+                label.w3-teal
+                    b Título
+                input.w3-input.w3-border.w3-light-grey(type='text' name='tit')
+                label.w3-teal
+                    b Músico
+                input.w3-input.w3-border.w3-light-grey(type='text' name='musico')
+                label.w3-teal
+                    b Ficheiro
+                input.w3-input.w3-border.w3-light-grey(type='text' name='file')
+                label.w3-teal
+                    b Duração
+                input.w3-input.w3-border.w3-light-grey(type='text' name='duracao')
+                input.w3-btn.w3-blue-grey(type='submit' value='Adicionar')
+            footer.w3-container.w3-teal.w3-padding-16
+                a(href='/').w3-button.w3-blue-grey Cancelar

@@ -10,7 +10,9 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "jsonfile": "^5.0.0",
     "morgan": "~1.9.1",
+    "nanoid": "^2.1.6",
     "pug": "2.0.0-beta11"
   }
 }
