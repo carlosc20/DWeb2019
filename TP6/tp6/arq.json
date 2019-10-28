@@ -2,18 +2,6 @@
   {
     "prov": "Alentejo",
     "local": "Santa Vitória, Beja",
-    "tit": "Disse a laranja ao limão",
-    "musico": "Jorge Montes Caranova (viola campaniça)",
-    "file": {
-      "@t": "MP3",
-      "#text": "d1/evo001.mp3"
-    },
-    "duracao": "1:02",
-    "id": "UUVEJEmm7UjYyodwV498K"
-  },
-  {
-    "prov": "Alentejo",
-    "local": "Santa Vitória, Beja",
     "tit": "Murianos é bom povo",
     "musico": "Jorge Montes Caranova (viola campaniça)",
     "obs": {
@@ -3363,17 +3351,6 @@
     "id": "Fbo01QcywBqsRES-YVHfN"
   },
   {
-    "prov": "Minho",
-    "tit": "-",
-    "inst": "cavaquinho; violão; bombo",
-    "file": {
-      "@t": "MP3",
-      "#text": "d1/evo246.mp3"
-    },
-    "duracao": "0:30",
-    "id": "2Re2maCfdEylYYn8uN1Ym"
-  },
-  {
     "prov": "Trás os Montes",
     "local": "Moimenta de Vinhais",
     "tit": "Murinheira",
@@ -5921,5 +5898,13 @@
     },
     "duracao": "4:42",
     "id": "_WHhkAApW7zZFAtF-bsJ4"
+  },
+  {
+    "id": "UUVEJEmm7UjYyodwV498K",
+    "prov": "Alentejo",
+    "local": "Santa Vitória, Beja",
+    "tit": "Disse a laranja ao limão",
+    "musico": "Jorge Montes Caranova (viola campaniça)",
+    "duracao": "1:02"
   }
 ]

@@ -24,5 +24,7 @@ block content
                             td= i.inst
                             td
                                 button.w3-button.w3-blue-grey(onclick="deleteMusic('" + i.id + "')") Apagar
+                            td
+                                a(href='/editar/' + i.id).w3-button.w3-blue-grey Editar
             footer.w3-container.w3-teal
                 address Criado por Carlos Castro 

@@ -13,12 +13,30 @@ router.get('/', function(req, res, next) {
             res.render('error', {message: "Erro na leitura da BD", error: err})
             return
         }
+        arq.sort((a, b) => a.tit > b.tit ? 1 : (a.tit < b.tit ? -1 : 0))
         res.render('index', { lista: arq })
     })
 });
 
 router.get('/novo', function(req, res, next) {
     res.render('new-music')
+});
+
+router.get('/editar/:id', function(req, res, next) {
+    var id = req.params.id
+    jsonfile.readFile(arqson, (err, arq) => {
+        if(err){
+            res.render('error', {message: "Erro na leitura da BD", error: err})
+            return
+        }
+        var music = arq.find(m => m.id == id)
+        if(music != undefined){
+            res.render('edit-music', {m: music})
+        }
+        else {
+            console.log('Erro: não encontrei o elemento a remover...')
+        }
+    })
 });
 
 router.post('/', function (req, res) {
@@ -32,8 +50,10 @@ router.post('/', function (req, res) {
         jsonfile.writeFile(arqson, arq, { spaces: 2 },  err => {
             if(err)
                 res.render('new-music')
-            else
+            else{
+                arq.sort((a, b) => a.tit > b.tit ? 1 : (a.tit < b.tit ? -1 : 0))
                 res.render('index', { lista: arq })
+            }
         })
     })
 })
@@ -69,10 +89,13 @@ router.put('/:id', function (req, res) {
         }
         var index = arq.findIndex(m => m.id == id)
         if(index > -1){
-            // arq.push(req.body)
-            jsonfile.writeFile(arqson, arq, { spaces: 2 }, err =>{
+            arq.splice(index,1)
+            arq.push(req.body)
+            jsonfile.writeFile(arqson, arq, { spaces: 2 }, err => {
                 if(err) console.log(err)
                 else console.log('BD atualizada')
+                arq.sort((a, b) => a.tit > b.tit ? 1 : (a.tit < b.tit ? -1 : 0))
+                res.render('index', { lista: arq })
             })
         }
         else {

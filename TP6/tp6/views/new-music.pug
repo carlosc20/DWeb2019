@@ -9,22 +9,19 @@ block content
             form.w3-section.w3-container(action='/' method='POST')
                 label.w3-teal
                     b Província
-                input.w3-input.w3-border.w3-light-grey(type='text' name='prov')
+                input.w3-input.w3-border.w3-light-grey(type='text' name='prov' required)
                 label.w3-teal
                     b Local
-                input.w3-input.w3-border.w3-light-grey(type='text' name='local')
+                input.w3-input.w3-border.w3-light-grey(type='text' name='local' required)
                 label.w3-teal
                     b Título
-                input.w3-input.w3-border.w3-light-grey(type='text' name='tit')
+                input.w3-input.w3-border.w3-light-grey(type='text' name='tit' required)
                 label.w3-teal
                     b Músico
-                input.w3-input.w3-border.w3-light-grey(type='text' name='musico')
-                label.w3-teal
-                    b Ficheiro
-                input.w3-input.w3-border.w3-light-grey(type='text' name='file')
+                input.w3-input.w3-border.w3-light-grey(type='text' name='musico' required)
                 label.w3-teal
                     b Duração
-                input.w3-input.w3-border.w3-light-grey(type='text' name='duracao')
-                input.w3-btn.w3-blue-grey(type='submit' value='Adicionar')
+                input.w3-input.w3-border.w3-light-grey(type='text' name='duracao' required)
+                input.w3-btn.w3-blue-grey.w3-margin-top(type='submit' value='Adicionar')
             footer.w3-container.w3-teal.w3-padding-16
                 a(href='/').w3-button.w3-blue-grey Cancelar

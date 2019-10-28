@@ -17,9 +17,9 @@
         </worker>
     </workteam>
     <abstract>
-        <p></p>
+        <p>Servidor em node.js usando a framework express que permite realizar operações CRUD sobre um ficheiro JSON que contém o Arquivo Sonoro de Ernesto Veiga de Oliveira.</p>
     </abstract>
     <deliverables>
-        <deliverable path=""></deliverable>
+        <deliverable path="tp6">Diretoria do servidor node.js</deliverable>
     </deliverables>
 </pr>
