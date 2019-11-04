@@ -1,0 +1,31 @@
+extends layout
+block content
+    .w3-container
+        p
+            h3 Identificador 
+            = f.id
+        p
+            h3 Título
+            = f.title
+        p
+            h3 Ano
+            = f.year
+        p
+            h3 Atores
+            ul
+                each a in f.cast
+                    li= a
+        p 
+            h3 Géneros
+            ul  
+                ul
+                each g in f.genres
+                    li= g
+    .w3-container
+        button.w3-button.w3-grey(onclick="apagarFilme('" + f.id +"')") Apagar
+    .w3-container
+        a(class='w3-button w3-grey' href='/filmes/editarFilme/' + f.id) Editar
+    .w3-container
+        .w3-container
+            hr
+            a(class='button' href='/filmes') Voltar à página de index

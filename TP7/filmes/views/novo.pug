@@ -1,0 +1,43 @@
+extends layout
+block content
+    .w3-container
+        header.w3-container
+            h3 Criação de um novo Filme
+            form.w3-card-4(action="/filmes" method='Post')
+                .w3-container
+                    .w3-row
+                        .w3-half.w3-container
+                            label
+                                b Título
+                            input.w3-input.w3-border.w3-light-grey(id='titulo' type='text' name='title' required)
+                        .w3-half.w3-container
+                            label
+                                b Ano
+                            input.w3-input.w3-border.w3-light-grey(id='ano' type='text' name='year' required)
+                    .w3-row
+                        .w3-half.w3-container
+                            div(id='divGeneros')
+                                label
+                                    b Géneros
+                                        .w3-container 
+                                            input.w3-input.w3-border.w3-light-grey(class="generos" type='text' name='genres[]').w3-threequarter
+                                            span 
+                                                i.fa.fa-times.fa-2(onclick="removeElement(this)")
+                        .w3-container
+                            i.fa.fa-plus(onclick="addField('divGeneros', 'generos', 'genre')")
+                        .w3-half.w3-container
+                            div(id='divAtores')
+                                label
+                                    b Atores
+                                        .w3-container 
+                                            input.w3-input.w3-border.w3-light-grey(class="atores" type='text' name='cast[]').w3-threequarter
+                                            span 
+                                                i.fa.fa-times.fa-2(onclick="removeElement(this)")
+                        .w3-container
+                            i.fa.fa-plus(onclick="addField('divAtores', 'atores', 'actor')")
+                input.w3-btn.w3-blue-grey(type="submit" value="Adicionar")
+        footer.w3-container
+        .w3-container
+            .w3-container
+                hr
+                a(class='button' href='/filmes') Voltar atrás

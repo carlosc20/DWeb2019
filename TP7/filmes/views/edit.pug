@@ -1,0 +1,46 @@
+extends layout
+block content
+    .w3-container
+        header.w3-container
+            h3 Editar Filme
+            .w3-container
+                .w3-row
+                    .w3-half.w3-container
+                        label
+                            b Título
+                        input.w3-input.w3-border.w3-light-grey(id='titulo' type='text' value=f.title)
+                    .w3-half.w3-container
+                        label
+                            b Ano
+                        input.w3-input.w3-border.w3-light-grey(id='ano' type='text' value=f.year)
+                .w3-row
+                    .w3-half.w3-container
+                        div(id='divGeneros')
+                            label
+                                b Géneros
+                                if(f.genres)
+                                    each genre in f.genres
+                                        .w3-container 
+                                            input.w3-input.w3-border.w3-light-grey(class="generos" type='text' value=genre).w3-threequarter
+                                            span 
+                                                i.fa.fa-times.fa-2(onclick="removeElement(this)")
+                    .w3-container
+                        i.fa.fa-plus(onclick="addField('divGeneros', 'generos', 'genre')")
+                    .w3-half.w3-container
+                        div(id='divAtores')
+                            label
+                                b Atores
+                                if(f.cast)
+                                    each actor in f.cast
+                                        .w3-container 
+                                            input.w3-input.w3-border.w3-light-grey(class="atores" type='text' value=actor).w3-threequarter
+                                            span 
+                                                i.fa.fa-times.fa-2(onclick="removeElement(this)")
+                    .w3-container
+                        i.fa.fa-plus(onclick="addField('divAtores', 'atores', 'actor')")
+            button.w3-btn.w3-blue-grey(onclick="editFilm('" + f.id + "')")  Editar 
+    footer.w3-container
+    .w3-container
+        .w3-container
+            hr
+            a(class='button' href='/filmes/' + f.id) Voltar atrás

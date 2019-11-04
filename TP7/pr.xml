@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../common/PR.dtd">
+<pr>
+    <metadata>
+        <keyname></keyname>
+        <title>TPC7</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>29/10/2019</bdate>
+        <edate>5/11/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A81946</identifier>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <email>a81946@alunos.uminho.pt</email>
+            <git>https://github.com/carlosc20</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Criação de 3 queries de mongoDB.</p>
+        <p>Criação de um servidor em node.js usando express e mongoose para responder a operações CRUD sobre uma bases de dados de filmes americanos.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="filmes">Servidor node.js</deliverable>
+        <deliverable path="queries.txt">Queries de mongodb</deliverable>
+    </deliverables>
+</pr>
