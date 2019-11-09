@@ -15,7 +15,7 @@ router.get('/novoFilme', function(req, res, next) {
 
 router.get('/editarFilme/:idFilme', function(req, res, next) {
     Filmes.consultar(req.params.idFilme)
-    .then(dados => res.render('edit', { f: dados }))
+    .then(dados => res.render('edit', { dados }))
     .catch(erro => res.render('error', { message: "Erro na leitura da BD"}))
 });
 
