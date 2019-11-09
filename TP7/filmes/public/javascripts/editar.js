@@ -20,7 +20,7 @@ function editFilm(id){
 
     axios.put('/filmes/' + id, f)
         .then(response =>  window.location.assign('/filmes/editarFilme/' + id))
-        .catch(error => console.log(error))
+        .catch(error => console.log("PUT " + error))
 }
 
 function addField(container, aClass, name){
