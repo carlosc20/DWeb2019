@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../common/PR.dtd">
+<pr>
+    <metadata>
+        <keyname></keyname>
+        <title>TPC8</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>5/11/2019</bdate>
+        <edate>12/11/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A81946</identifier>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <email>a81946@alunos.uminho.pt</email>
+            <git>https://github.com/carlosc20</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Criação de um servidor em node.js usando express e mongoose para responder a pedidos GET de uma base de dados de Prémios Nobel.</p>
+        <p>Foram criadas duas APIs, uma que responde em / e fornece a interface, e outra que responde em /api que fornece dados em json (Exercício 1 <xref url="http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/fichas/dweb2019-e2.html">dweb2019-e2</xref>) à primeira.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="nobel">Diretoria do projeto</deliverable>
+    </deliverables>
+</pr>
