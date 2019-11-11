@@ -15,4 +15,4 @@ var prizeSchema = new mongoose.Schema({
     laureates: [laureateSchema]
 })
 
-module.exports = mongoose.model('premios', prizeSchema)
+module.exports = mongoose.model('nobel', prizeSchema)

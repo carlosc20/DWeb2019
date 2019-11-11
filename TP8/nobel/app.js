@@ -4,7 +4,7 @@ var path = require('path');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/nobel', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://127.0.0.1:27017/nobels', {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => console.log('Mongo ready: ' + mongoose.connection.readyState))
   .catch(() => console.log('Mongo: erro na conexão'))
 
@@ -25,8 +25,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
 app.use('/api', apiRouter);
+app.use('/', indexRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

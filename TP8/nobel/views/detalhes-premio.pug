@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1= "Prémio Nobel de " + premio.category + " (" + premio.year + ")"
+                .w3-container
+                    if(premio.overallMotivation != undefined)
+                        header.w3-container
+                            h2 Motivação Geral
+                            i= premio.overallMotivation 
+                .w3-container
+                    header.w3-container
+                        h2 Laureados
+                    each l in premio.laureates
+                        br
+                        .w3-container
+                            ul.w3-ul
+                                li= "Id: " + l.id
+                                li= "Nome: " + l.firstname + ' ' + l.surname
+                                li= "Motivação: " + l.motivation
+                                li= "Share: " + l.share 
+            footer.w3-container.w3-teal
+                a(href='/premios').w3-button Voltar

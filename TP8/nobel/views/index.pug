@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1 Prémios Nobel
+            .w3-container
+                ul.w3-ul
+                    li
+                        a(href='/premios') Ver todos os prémios
+                    li
+                        a(href='/categorias') Ver todas as categorias
+                    li
+                        a(href='/laureados') Ver todos os laureados e os seu prémios

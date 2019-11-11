@@ -6,7 +6,7 @@ const ObjectId = mongoose.Types.ObjectId
 module.exports.listar = () =>{
     return Prize
             .find()
-            .select({year:1, category:1})
+            .select({year:1, category:1, _id:1})
             .exec()
 }
 
@@ -38,21 +38,17 @@ module.exports.listarPorCategoriaData = (categoria, data) =>{
 // ordenada alfabeticamente por nome dos laureados com os campos correspondentes ao nome, ano do prémio e categoria
 module.exports.listarLaureados = () =>{
     return Prize
-            .aggregate([{$unwind: "$laureates"}, 
-                        {$group: 
-                            {_id: "$laureates.id", 
-                            firstname:{$first: "$laureates.firstname"},
-                            surname:{$first: "$laureates.surname"},
-                            prize: 
-                                    {$push: 
-                                        {year:"$year", category:"$category"}
-                                    }
-                            }
-                        },
-                        {$project: 
-                            {firstname:1, surname:1, prize:1, _id:0}
-                        }
-                    ])
+            .aggregate([
+                {$unwind: "$laureates"}, 
+                {$group: {
+                    _id: "$laureates.id", 
+                    firstname:{$first: "$laureates.firstname"},
+                    surname:{$first: "$laureates.surname"},
+                    prize: {$push: {year:"$year", category:"$category"}}
+                    }
+                },
+                {$project: {firstname:1, surname:1, prize:1, _id:0}}
+            ])
             .sort({firstname:1, surname:1})
             .exec()
   }

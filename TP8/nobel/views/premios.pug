@@ -1,0 +1,28 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1 Prémios
+                .w3-container
+                form.w3-half.w3-container(action='/premios' method='GET')
+                    label
+                        b Categoria
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='categoria')
+                    label
+                        b Ano
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='data')
+                    input.w3-btn(type="submit" value="Submeter").w3-teal
+                table.w3-table-all
+                    tr  
+                        th Ano
+                        th Categoria
+                        th Detalhes
+                    each p in lista
+                        tr  
+                            td= p.year 
+                            td= p.category
+                            td
+                                a(href='/premios/' + p._id).w3-button.w3-teal Ver
+            footer.w3-container.w3-teal
+                a(href='/').w3-button Página inicial
