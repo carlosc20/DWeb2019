@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1= e.designacao + '(' + e.sigla + ')'
+                .w3-container
+                    header.w3-container
+                        h2 Tipologias
+                    table.w3-table-all
+                        tr  
+                            th Sigla
+                            th Designação
+                            th Id
+                        each t in tipologias
+                            tr  
+                                td= t.sigla
+                                td= t.designacao
+                                td= t.id
+                    header.w3-container
+                        h2 Processos em que intervem como dono
+                    table.w3-table-all
+                        tr  
+                            th Código
+                            th Título
+                        each p in dono
+                            tr  
+                                td= p.codigo
+                                td= p.titulo
+                    header.w3-container
+                        h2 Processos em que intervem como participante
+                    table.w3-table-all.w3-margin-bottom
+                        tr  
+                            th Código
+                            th Título
+                        each p in participante
+                            tr  
+                                td= p.codigo
+                                td= p.titulo
+        footer.w3-container.w3-teal
+            a(href='/').w3-button Voltar
