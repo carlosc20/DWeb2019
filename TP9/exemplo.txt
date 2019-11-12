@@ -1,0 +1,1 @@
+node mongoimport nomeDatabase nomeModel input.json

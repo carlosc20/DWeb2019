@@ -1,0 +1,14 @@
+{
+  "name": "mongoimport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mongoimport.js",
+  "scripts": {
+    "test": "run"
+  },
+  "author": "Carlos Castro",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.7.10"
+  }
+}
