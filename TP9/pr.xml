@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../common/PR.dtd">
+<pr>
+    <metadata>
+        <keyname></keyname>
+        <title>TPC9</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>12/11/2019</bdate>
+        <edate>18/11/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A81946</identifier>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <email>a81946@alunos.uminho.pt</email>
+            <git>https://github.com/carlosc20</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Aplicação em node.js que permite criar uma collection em mongodb a partir de um ficheiro json.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="mongoimport.js">Aplicação mongoimport</deliverable>
+        <deliverable path="exemplo.txt">Exemplo de como executar.</deliverable>
+    </deliverables>
+</pr>

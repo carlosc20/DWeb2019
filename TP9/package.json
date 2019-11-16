@@ -4,7 +4,7 @@
   "description": "",
   "main": "mongoimport.js",
   "scripts": {
-    "test": "run"
+    "test": "node mongoimport"
   },
   "author": "Carlos Castro",
   "license": "ISC",
