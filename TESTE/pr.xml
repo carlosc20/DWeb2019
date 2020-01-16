@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../common/PR.dtd">
+<pr>
+    <metadata>
+        <keyname></keyname>
+        <title>TESTE</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>16/1/2020</bdate>
+        <edate>16/1/2020</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A81946</identifier>
+            <name>Carlos Peixoto Antunes de Castro</name>
+            <email>a81946@alunos.uminho.pt</email>
+            <git>https://github.com/carlosc20</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Resolução de um teste (http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/fichas/daw2020-e1.html) que consiste em dois exercícios de desenvolvimento de aplicações web utilizando Node e Express.</p>
+        <p>No exercício 1, o dataset fornecido foi convertido para json utilizando um conversor online (https://www.freeformatter.com/xml-to-json-converter.html).
+        A persistência foi feita usando MongoDB, e o dataset em json foi importado com o comando "mongoimport -d obras -c obras --jsonArray arquivo.json".
+        Para além de ter o MongoDB (na porta padrão 27017) não é necessário qualquer requisito adicional.</p>
+        <p>O exercíco 2 para além do pedido disponibiliza também uma página de acesso ás tipologias, semelhante á da entidade.</p>
+        <p>Ambos os servidores correm na porta 3000 por definição.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="arquivo">Exercício Nº 1: Arquivo de Música Digital</deliverable>
+        <deliverable path="arquivo/arquivo.json">Exercício Nº 1, dataset transformado</deliverable>
+        <deliverable path="clav">Exercício Nº 2: CLAV: Classificação e Avaliação da Informação Pública</deliverable>
+        <deliverable path="clav/api.txt">Exercício Nº 2, "aquecimento"</deliverable>
+    </deliverables>
+</pr>

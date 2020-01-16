@@ -2,17 +2,8 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
-var mongoose = require('mongoose');
-
-mongoose.connect('mongodb://127.0.0.1:27017/uminho-isn', {useNewUrlParser: true, useUnifiedTopology: true})
-  .then(() => console.log('Mongo: ready(' + mongoose.connection.readyState + ')'))
-  .catch(() => console.log('Mongo: connection error(' + mongoose.connection.readyState + ')'));
-
-
-mongoose.set('useFindAndModify', false);
 
 var indexRouter = require('./routes/index');
-var apiRouter = require('./routes/api');
 
 var app = express();
 
@@ -25,9 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', apiRouter);
 app.use('/', indexRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

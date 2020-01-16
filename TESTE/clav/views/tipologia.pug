@@ -1,0 +1,60 @@
+extends layout
+
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1 Tipologia
+                .w3-container
+                    header.w3-container
+                        h2 Informação base
+                    table.w3-table-all
+                        tr  
+                            th Estado
+                            th Sigla
+                            th Designação
+                        tr  
+                            td= t.estado
+                            td= t.sigla
+                            td= t.designacao
+                    hr
+                    header.w3-container
+                        h2 Elementos
+                    table.w3-table-all
+                        tr  
+                            th Id
+                            th Sigla
+                            th Designação
+                        each e in elementos
+                            tr  
+                                td
+                                    a(class='w3-button w3-border' href='/entidades/' + e.id)= e.id
+                                td= e.sigla
+                                td= e.designacao
+                    hr
+                    header.w3-container
+                        h2 Processos em que intervem como dono
+                    table.w3-table-all
+                        tr  
+                            th Código
+                            th Título
+                        each p in dono
+                            tr  
+                                td 
+                                    a(class='w3-button w3-border' href='http://clav.dglab.gov.pt/classes/consultar/' + p.codigo)= p.codigo
+                                td= p.titulo
+                    hr
+                    header.w3-container
+                        h2 Processos em que intervem como participante
+                    table.w3-table-all.w3-margin-bottom
+                        tr  
+                            th Código
+                            th Título
+                        each p in participante
+                            tr  
+                                td 
+                                    a(class='w3-button w3-border' href='http://clav.dglab.gov.pt/classes/consultar/' + p.codigo)= p.codigo
+                                td= p.titulo
+        footer.w3-container.w3-teal
+            a(href='javascript:window.history.back()').w3-button Página anterior
+            a(href='/').w3-button Página inicial
